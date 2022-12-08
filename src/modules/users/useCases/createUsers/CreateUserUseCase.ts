@@ -1,7 +1,7 @@
-import { AppError } from "../../../../utils/AppError"
 import { hash } from "bcrypt"
 
 import { prismaClient } from "../../../../database/prismaClient"
+import { AppError } from "../../../../utils/AppError"
 
 interface ICreateUser {
   name: string
