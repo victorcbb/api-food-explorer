@@ -52,17 +52,16 @@ model Product {
   createdAt   DateTime     @default(now())
   updatedAt   DateTime
   requestId   Int?
-
-  Request Request? @relation(fields: [requestId], references: [id])
+  Request     Request?     @relation(fields: [requestId], references: [id])
 
   @@map("products")
 }
 
 model Ingredient {
-  id        String   @id @default(uuid())
-  name      String   @unique
-  createdAt DateTime @default(now())
-  productId String?
+  id        String    @id @default(uuid())
+  name      String    @unique
+  createdAt DateTime  @default(now())
+  products  Product[]
 
-  Product Product? @relation(fields: [productId], references: [id])
+  @@map("ingredients")
 }
