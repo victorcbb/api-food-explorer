@@ -3,14 +3,13 @@ import { CreateProductUseCase } from "./CreateProductUseCase"
 
 export class CreateProductController {
   async handle(req: Request, res: Response) {
-    const { name, description, image, price, ingredients } = req.body
+    const { name, description, price, ingredients } = req.body
 
     const createProductUseCase = new CreateProductUseCase()
 
     await createProductUseCase.execute({
       name,
       description,
-      image,
       price,
       ingredients
     })

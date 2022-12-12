@@ -1,5 +1,6 @@
 import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
+import { authConfig } from "../../../configs/auth";
 import { prismaClient } from "../../../database/prismaClient"
 import { AppError } from "../../../utils/AppError";
 
@@ -26,9 +27,10 @@ export class AuthenticateUserUseCase {
       throw new AppError("Usuário e/ou senha inválidos.", 403)
     }
 
-    const token = await sign({email}, "6818cd21a3bd0e0636bdbc48372efd69", {
+    const{ secret, expiresIn } = authConfig.jwt
+    const token = await sign({}, secret, {
       subject: user.id,
-      expiresIn: "1d"
+      expiresIn
     })
 
     return token

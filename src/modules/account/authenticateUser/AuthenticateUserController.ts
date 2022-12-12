@@ -13,7 +13,5 @@ export class AuthenticateUserController {
     })
 
     return res.json(result)
-
-    return res.json()
   }
 }

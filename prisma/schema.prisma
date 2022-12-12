@@ -48,7 +48,7 @@ model Product {
   id          String    @id @default(uuid())
   name        String    @unique
   description String
-  image       String
+  image       String?
   price       Decimal
   createdAt   DateTime  @default(now())
   updatedAt   DateTime?

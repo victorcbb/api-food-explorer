@@ -1,11 +1,14 @@
 import express, { NextFunction, Request, Response } from "express"
 import "express-async-errors"
+import { UPLOADS_FOLDER } from "./configs/upload"
 
 import { routes } from "./routes"
 import { AppError } from "./utils/AppError"
 
 const app = express()
 app.use(express.json())
+
+app.use("/files", express.static(UPLOADS_FOLDER))
 
 app.use(routes)
 
