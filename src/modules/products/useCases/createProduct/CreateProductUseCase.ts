@@ -32,10 +32,9 @@ export class CreateProductUseCase {
         description,
         price,
         ingredients: {
-          connectOrCreate: ingredients.map((ingredient) => {
+          connect: ingredients.map((ingredient) => {
             return {
-              create: { name: ingredient },
-              where: { name: ingredient },
+              name: ingredient
             }
           })
         }

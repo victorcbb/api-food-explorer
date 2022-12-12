@@ -63,6 +63,7 @@ model Product {
 model Ingredient {
   id        String   @id @default(uuid())
   name      String   @unique
+  image     String
   createdAt DateTime @default(now())
 
   products Product[]
