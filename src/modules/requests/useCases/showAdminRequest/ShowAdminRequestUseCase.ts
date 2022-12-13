@@ -23,7 +23,7 @@ export class ShowAdminRequestUseCase {
       throw new AppError("Ação negada.", 401)
     }
 
-    const result = await prismaClient.request.findFirst({})
+    const result = await prismaClient.request.findMany({})
 
     return result
   }
