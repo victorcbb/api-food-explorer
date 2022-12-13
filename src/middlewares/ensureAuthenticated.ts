@@ -14,8 +14,12 @@ export function ensureAuthenticated(req: Request, res: Response, next: NextFunct
   const [, token] = authToken.split(" ")
 
   try {
-    verify(token, authConfig.jwt.secret)
-  
+    const { sub: userId } = verify(token, authConfig.jwt.secret)
+
+    req.user = {
+      id: userId.toString(),
+    }
+
     return next()
   } catch (error) {
     throw new AppError("Token inválido", 401)
