@@ -20,10 +20,14 @@ export class ShowAdminRequestUseCase {
     })
 
     if (!isAdmin) {
-      throw new AppError("Ação negada.", 401)
+      throw new AppError("Ação negada.", 403)
     }
 
-    const result = await prismaClient.request.findMany({})
+    const result = await prismaClient.request.findMany({
+      include: {
+        details: true,
+      }
+    })
 
     return result
   }
