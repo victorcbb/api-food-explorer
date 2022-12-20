@@ -6,6 +6,7 @@ interface ICreateProduct {
   description: string
   price: number
   ingredients: string[]
+  category: "main" | "dessert" | "drink"
 }
 
 export class CreateProductUseCase {
@@ -13,7 +14,8 @@ export class CreateProductUseCase {
     name,
     description,
     price,
-    ingredients
+    ingredients,
+    category
   }: ICreateProduct) {
 
     const productExists = await prismaClient.product.findFirst({
@@ -31,6 +33,7 @@ export class CreateProductUseCase {
         name,
         description,
         price,
+        category,
         ingredients: {
           connect: ingredients.map((ingredient) => {
             return {
@@ -38,7 +41,7 @@ export class CreateProductUseCase {
             }
           })
         }
-      }
+      },
     })
 
   }

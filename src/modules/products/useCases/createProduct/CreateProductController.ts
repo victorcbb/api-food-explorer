@@ -3,7 +3,7 @@ import { CreateProductUseCase } from "./CreateProductUseCase"
 
 export class CreateProductController {
   async handle(req: Request, res: Response) {
-    const { name, description, price, ingredients } = req.body
+    const { name, description, price, ingredients, category } = req.body
 
     const createProductUseCase = new CreateProductUseCase()
 
@@ -11,7 +11,8 @@ export class CreateProductController {
       name,
       description,
       price,
-      ingredients
+      ingredients,
+      category
     })
 
     return res.json()
