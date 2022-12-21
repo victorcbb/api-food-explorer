@@ -22,6 +22,9 @@ export class DetailsProductUseCase {
     const result = await prismaClient.product.findFirst({
       where: {
         id
+      },
+      include: {
+        ingredients: true
       }
     })
 
