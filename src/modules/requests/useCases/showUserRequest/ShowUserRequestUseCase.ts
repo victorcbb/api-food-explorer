@@ -20,23 +20,19 @@ export class ShowUserRequestUseCase {
       throw new AppError("Ação negada. Reconecte e tente novamente", 401)
     }
 
-    const result = await prismaClient.user.findFirst({
+    const result = await prismaClient.request.findMany({
       where: {
-        id: userId,
+        userId,
+      },
+      orderBy: {
+        id: "asc"
       },
       select: {
+        createdAt: true,
         id: true,
-        name: true,
-        requests: {
-          include: {
-            details: {
-              select: {
-                id: true,
-                name: true,
-              }
-            }
-          }
-        }
+        status: true,
+        userId: true,
+        details: true
       }
     })
 
