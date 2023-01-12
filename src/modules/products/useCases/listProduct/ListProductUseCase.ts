@@ -9,12 +9,29 @@ export class ListProductUseCase {
 
     if(name) {
       const result = await prismaClient.product.findMany({
+        orderBy: {
+          createdAt: 'asc'
+        },
         where: {
-          name: {
-            contains: name,
-            mode: "insensitive"
-          }
-        }
+          OR: [
+            {
+              name: {
+                contains: name,
+                mode: "insensitive"
+              },
+            },
+            {
+              ingredients: {
+                some: {
+                  name: {
+                    contains: name,
+                    mode: "insensitive"
+                  }
+                }
+              },
+            },
+          ],
+        },
       })
 
       return result
