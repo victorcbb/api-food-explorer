@@ -4,7 +4,9 @@
   "description": "API for food delivery services from Explorer program of Rocketseat",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "node ./src/server.ts",
+    "vercel-build": "prisma generate && prisma migrate deploy",
+    "prisma:generate": "prisma generate",
     "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "author": "Victor  Barros",
