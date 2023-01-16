@@ -1,5 +1,6 @@
 {
   "name": "api-food-explorer",
+  "type": "module",
   "version": "1.0.0",
   "description": "API for food delivery services from Explorer program of Rocketseat",
   "main": "index.js",
