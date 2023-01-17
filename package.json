@@ -1,7 +1,7 @@
 {
   "name": "api-food-explorer",
   "version": "1.0.0",
-  "description": "API for food delivery services from Explorer program of Rocketseat",
+  "description": "API for food delivery services from Final Challenge Explorer program of Rocketseat",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
