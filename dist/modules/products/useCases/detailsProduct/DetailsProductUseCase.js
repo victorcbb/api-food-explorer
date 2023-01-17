@@ -25,4 +25,3 @@ class DetailsProductUseCase {
     }
 }
 exports.DetailsProductUseCase = DetailsProductUseCase;
-//# sourceMappingURL=DetailsProductUseCase.js.map

@@ -7,4 +7,3 @@ const usersRoutes = (0, express_1.Router)();
 exports.usersRoutes = usersRoutes;
 const createUserController = new CreateUserController_1.CreateUserController();
 usersRoutes.post("/", createUserController.handle);
-//# sourceMappingURL=users.routes.js.map

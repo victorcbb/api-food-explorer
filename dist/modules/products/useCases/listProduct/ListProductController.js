@@ -14,4 +14,3 @@ class ListProductController {
     }
 }
 exports.ListProductController = ListProductController;
-//# sourceMappingURL=ListProductController.js.map

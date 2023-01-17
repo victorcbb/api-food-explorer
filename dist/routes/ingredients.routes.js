@@ -7,4 +7,3 @@ const ingredientsRoutes = (0, express_1.Router)();
 exports.ingredientsRoutes = ingredientsRoutes;
 const createIngredientController = new CreateIngredientCrontoller_1.CreateIngredientController();
 ingredientsRoutes.post("/", createIngredientController.handle);
-//# sourceMappingURL=ingredients.routes.js.map

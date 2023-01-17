@@ -7,4 +7,3 @@ const authenticateRoutes = (0, express_1.Router)();
 exports.authenticateRoutes = authenticateRoutes;
 const authenticateUserController = new AuthenticateUserController_1.AuthenticateUserController();
 authenticateRoutes.post("/", authenticateUserController.handle);
-//# sourceMappingURL=authenticate.routes.js.map

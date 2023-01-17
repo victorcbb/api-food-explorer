@@ -14,4 +14,3 @@ routes.use("/products", products_routes_1.productsRoutes);
 routes.use("/requests", requests_routes_1.requestsRoutes);
 routes.use("/ingredients", ingredients_routes_1.ingredientsRoutes);
 routes.use("/authenticate", authenticate_routes_1.authenticateRoutes);
-//# sourceMappingURL=index.js.map

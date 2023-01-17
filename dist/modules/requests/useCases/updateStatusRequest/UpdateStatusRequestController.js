@@ -12,4 +12,3 @@ class UpdateStatusRequestController {
     }
 }
 exports.UpdateStatusRequestController = UpdateStatusRequestController;
-//# sourceMappingURL=UpdateStatusRequestController.js.map

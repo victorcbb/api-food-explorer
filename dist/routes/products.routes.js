@@ -23,4 +23,3 @@ productsRoutes.get("/", listProductController.handle);
 productsRoutes.get("/details/:id", detailsProductController.handle);
 productsRoutes.post("/", ensureAuthenticated_1.ensureAuthenticated, createProductController.handle);
 productsRoutes.patch("/image/:id", ensureAuthenticated_1.ensureAuthenticated, upload.single("image"), updateImageProductController.handle);
-//# sourceMappingURL=products.routes.js.map

@@ -14,4 +14,3 @@ class CreateIngredientController {
     }
 }
 exports.CreateIngredientController = CreateIngredientController;
-//# sourceMappingURL=CreateIngredientCrontoller.js.map

@@ -22,4 +22,3 @@ function ensureAuthenticated(req, res, next) {
     }
 }
 exports.ensureAuthenticated = ensureAuthenticated;
-//# sourceMappingURL=ensureAuthenticated.js.map

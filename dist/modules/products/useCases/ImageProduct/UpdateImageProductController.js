@@ -15,4 +15,3 @@ class UpdateImageProductController {
     }
 }
 exports.UpdateImageProductController = UpdateImageProductController;
-//# sourceMappingURL=UpdateImageProductController.js.map

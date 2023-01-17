@@ -17,4 +17,3 @@ requestsRoutes.post("/", ensureAuthenticated_1.ensureAuthenticated, createReques
 requestsRoutes.get("/myrequests", ensureAuthenticated_1.ensureAuthenticated, showUserRequestController.handle);
 requestsRoutes.get("/admin", ensureAuthenticated_1.ensureAuthenticated, showAdminRequestController.handle);
 requestsRoutes.get("/update", ensureAuthenticated_1.ensureAuthenticated, updateStatusRequestController.handle);
-//# sourceMappingURL=requests.routes.js.map

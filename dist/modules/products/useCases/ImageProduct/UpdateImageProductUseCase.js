@@ -30,4 +30,3 @@ class UpdateImageProductUseCase {
     }
 }
 exports.UpdateImageProductUseCase = UpdateImageProductUseCase;
-//# sourceMappingURL=UpdateImageProductUseCase.js.map

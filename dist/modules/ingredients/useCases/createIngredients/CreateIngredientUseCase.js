@@ -22,4 +22,3 @@ class CreateIngredientUseCase {
     }
 }
 exports.CreateIngredientUseCase = CreateIngredientUseCase;
-//# sourceMappingURL=CreateIngredientUseCase.js.map
