@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "pm2-runtime start ecosystem.config.js --env production",
-    "prisma:generate": "prisma generate",
+    "vercel-build": "prisma generate && prisma migrate deploy",
     "postinstall": "prisma generate",
     "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
   },
