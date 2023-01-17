@@ -1,12 +1,14 @@
 import "express-async-errors"
-import "dotenv/config"
+import dotenv from "dotenv"
 import cors from 'cors'
 import express, { NextFunction, Request, Response } from "express"
 
-import { UPLOADS_FOLDER } from "./configs/upload"
+import { UPLOADS_FOLDER } from "./configs/upload.js"
 
-import { routes } from "./routes"
-import { AppError } from "./utils/AppError"
+import { routes } from "./routes/index.js"
+import { AppError } from "./utils/AppError.js"
+
+dotenv.config()
 
 const app = express()
 app.use(cors())
@@ -32,5 +34,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   })
 })
 
-const PORT = 3333
+const PORT = process.env.PORT || 3333
 app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`))

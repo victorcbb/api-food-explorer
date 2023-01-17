@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.requestsRoutes = void 0;
+const express_1 = require("express");
+const ensureAuthenticated_1 = require("../middlewares/ensureAuthenticated");
+const CreateRequestController_1 = require("../modules/requests/useCases/createRequest/CreateRequestController");
+const ShowAdminRequestController_1 = require("../modules/requests/useCases/showAdminRequest/ShowAdminRequestController");
+const ShowUserRequestController_1 = require("../modules/requests/useCases/showUserRequest/ShowUserRequestController");
+const UpdateStatusRequestController_1 = require("../modules/requests/useCases/updateStatusRequest/UpdateStatusRequestController");
+const requestsRoutes = (0, express_1.Router)();
+exports.requestsRoutes = requestsRoutes;
+const createRequestController = new CreateRequestController_1.CreateRequestController();
+const showUserRequestController = new ShowUserRequestController_1.ShowUserRequestController();
+const showAdminRequestController = new ShowAdminRequestController_1.ShowAdminRequestController();
+const updateStatusRequestController = new UpdateStatusRequestController_1.UpdateStatusRequestController();
+requestsRoutes.post("/", ensureAuthenticated_1.ensureAuthenticated, createRequestController.handle);
+requestsRoutes.get("/myrequests", ensureAuthenticated_1.ensureAuthenticated, showUserRequestController.handle);
+requestsRoutes.get("/admin", ensureAuthenticated_1.ensureAuthenticated, showAdminRequestController.handle);
+requestsRoutes.get("/update", ensureAuthenticated_1.ensureAuthenticated, updateStatusRequestController.handle);
+//# sourceMappingURL=requests.routes.js.map
