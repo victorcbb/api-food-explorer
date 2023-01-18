@@ -12,6 +12,6 @@ export class ListProductController {
       return res.json(result)
     }
 
-    return res.json()
+    return res.status(200).json()
   }
 }

@@ -15,6 +15,6 @@ export class CreateProductController {
       category
     })
 
-    return res.json()
+    return res.status(201).json()
   }
 }

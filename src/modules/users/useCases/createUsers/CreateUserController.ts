@@ -13,6 +13,6 @@ export class CreateUserController {
       password,
     })
 
-    return res.json()
+    return res.status(201).json()
   }
 }
