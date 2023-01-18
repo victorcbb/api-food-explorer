@@ -12,7 +12,6 @@ phases:
   post_build:
     commands:
       - echo Generating Prisma database...
-      - npm run prisma:introspect
       - npm run prisma:generate
       - echo Removing unnecessary files...
       - rm -rf node_modules/

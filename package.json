@@ -6,7 +6,6 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "prisma:introspect": "prisma introspect",
     "prisma:generate": "prisma generate",
     "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
   },
