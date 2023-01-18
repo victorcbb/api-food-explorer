@@ -1,0 +1,20 @@
+phases:
+  pre_build:
+    commands:
+      - echo Install packages...
+      - npm install
+  build:
+    commands:
+      - echo Create build...
+      - npm run build
+  post_build:
+    commands:
+      - echo Generating Prisma database...
+      - npm run prisma:introspect
+      - npm run prisma:generate
+      - echo Removing unnecessary files...
+      - rm -rf node_modules/
+artifacts:
+  base-directory: '.'
+  files:
+    - '**/*'
