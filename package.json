@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "pm2-runtime start ecosystem.config.js --env production",
-    "vercel-build": "prisma generate && prisma migrate deploy",
-    "postinstall": "prisma generate",
+    "prisma:introspect": "prisma introspect",
+    "prisma:generate": "prisma generate",
     "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "author": "Victor  Barros",
