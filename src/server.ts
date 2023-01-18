@@ -34,5 +34,9 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   })
 })
 
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'OK' })
+})
+
 const PORT = process.env.PORT || 3333
 app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`))
