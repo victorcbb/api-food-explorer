@@ -3,10 +3,10 @@ import dotenv from "dotenv"
 import cors from 'cors'
 import express, { NextFunction, Request, Response } from "express"
 
-import { UPLOADS_FOLDER } from "./configs/upload.js"
+import { UPLOADS_FOLDER } from "./configs/upload"
 
-import { routes } from "./routes/index.js"
-import { AppError } from "./utils/AppError.js"
+import { routes } from "./routes"
+import { AppError } from "./utils/AppError"
 
 dotenv.config()
 
