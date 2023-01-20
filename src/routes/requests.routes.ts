@@ -15,6 +15,6 @@ const updateStatusRequestController = new UpdateStatusRequestController()
 requestsRoutes.post("/", ensureAuthenticated, createRequestController.handle)
 requestsRoutes.get("/myrequests", ensureAuthenticated, showUserRequestController.handle)
 requestsRoutes.get("/admin", ensureAuthenticated, showAdminRequestController.handle)
-requestsRoutes.get("/update", ensureAuthenticated, updateStatusRequestController.handle)
+requestsRoutes.put("/update", ensureAuthenticated, updateStatusRequestController.handle)
 
 export { requestsRoutes }
