@@ -23,7 +23,7 @@ export class UpdateStatusRequestUseCase {
       },
     })
 
-    if (!isAdmin && isAdmin.role !== 'ADMIN') {
+    if (!isAdmin || isAdmin.role !== 'ADMIN') {
       throw new AppError("Ação negada.", 403)
     }
 
