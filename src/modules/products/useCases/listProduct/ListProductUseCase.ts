@@ -37,7 +37,11 @@ export class ListProductUseCase {
       return result
     }
 
-    const result = await prismaClient.product.findMany()
+    const result = await prismaClient.product.findMany({
+      orderBy: {
+        createdAt: 'asc'
+      }
+    })
 
     return result
   }
