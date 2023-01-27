@@ -2,7 +2,8 @@
 
 ## Description
 
-It is a API app of food delivery, having users and admin, which relate to an Requests table and in turn relates to products that have ingredients.
+This is a restaurant food delivery API, having users as customers and ADMIN, being able to select one or more products, forming an order to make the purchase.
+ADMIN, in addition to conventional use, can manage orders and add new products.
 
 ### Current Stack :technologist:
 - `Typescript`
