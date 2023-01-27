@@ -19,6 +19,11 @@ const updateImageProductController = new UpdateImageProductController()
 productsRoutes.get("/", listProductController.handle)
 productsRoutes.get("/details/:id", detailsProductController.handle)
 productsRoutes.post("/", ensureAuthenticated, createProductController.handle)
-productsRoutes.patch("/image/:id", ensureAuthenticated, upload.single("image"), updateImageProductController.handle)
+productsRoutes.patch(
+  "/image/:id", 
+  ensureAuthenticated, 
+  upload.single("image"), 
+  updateImageProductController.handle
+)
 
 export { productsRoutes }
