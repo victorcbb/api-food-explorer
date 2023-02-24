@@ -33,6 +33,36 @@ $ npm install
 $ npm run dev
 ```
 
+## Running the DB
+
+### Install Docker
+
+Now it will be necessary to install Docker so that we can create a DB to test the app. The installation strategies vary according to each OS, so i'll leave a link to each one:
+
+- [For Windows](https://docs.docker.com/desktop/install/windows-install/)
+- [For MacOS](https://docs.docker.com/desktop/install/mac-install/)
+- [For Linux](https://docs.docker.com/desktop/install/linux-install/#supported-platforms)
+
+With Docker installed, let's create a Postgres container through the CLI:
+
+ ```bash 
+docker run --name NOME_DO_CONTAINER -e POSTGRES_USER=NOME_DO_USER -e POSTGRES_PASSWORD=SENHA_PARA_O_USER -e POSTGRES_DB=NOME_DO_BANCO -p 5432:5432 -d postgres
+```
+
+Use the same credencials from the previous step inside the `.env.example` file, taking the opportunity to change the name of this file to `.env`.
+
+This API uses the [prisma](https://www.prisma.io/) ORM to create the database and its queries. For the database work locally it will be necessary to follow some steps.
+
+- Run prisma migrate:
+ ```bash 
+npx prisma migrate dev
+```
+
+- Run prisma seed:
+ ```bash 
+npx prisma db seed
+```
+
 ## Endpoints
 
 ### Authenticate
