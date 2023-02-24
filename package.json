@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "API for food delivery services from Final Challenge Explorer program of Rocketseat",
   "main": "index.js",
+  "prisma": {
+    "seed": "ts-node-dev --transpile-only prisma/seed.ts"
+  },
   "scripts": {
     "build": "tsc",
     "start": "pm2-runtime start ecosystem.config.js --env production",
