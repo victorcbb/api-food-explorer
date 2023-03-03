@@ -12,6 +12,7 @@ ADMIN, in addition to conventional use, can manage orders and add new products.
 - `PostgreSQL`
 - `jsonwebtoken`
 - `bcrypt`
+- `Docker`
 
 ## Installation
 
